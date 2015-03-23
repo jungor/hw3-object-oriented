@@ -1,6 +1,6 @@
 // In file extend.js
 // Created by Junjie Li
-// Last modified on 2015-3-21
+// Last modified on 2015-3-22
 
 ;
 var myextend = (function(window){
@@ -11,7 +11,7 @@ var myextend = (function(window){
       base.apply(this, arguments);
       derived.apply(this, arguments);
     }
-    // 帮助函数,用来判断子类中是否有与父类同名的函数,是则继承后先调用基类函数，在调用父类函数;
+    // 帮助函数,用来继承并判断子类中是否有与父类同名的函数,是则继承后先调用父类函数，在调用子类函数;
     function helper_inherate(to, from){
       var old;
       for (var key in from) {
